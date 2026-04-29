@@ -61,8 +61,7 @@ export const getUsuario = async (req, res) => {
  const newId = lastId + 1; // Calculamos el nuevo ID
  // 3. Insertamos el nuevo producto con el ID incrementado
  const [insertResult] = await pool.query(
- "INSERT INTO productos (id, nombre, descripcion, precio_costo, precio_venta, cantidad,
-fotografia) VALUES (?, ?, ?, ?, ?, ?, ?)",
+ "INSERT INTO productos (id, nombre, descripcion, precio_costo, precio_venta, cantidad, fotografia) VALUES (?, ?, ?, ?, ?, ?, ?)",
  [newId, name, description, price_cost, price_sale, quantity, image]
  );
  // 4. Verificamos si la inserción fue exitosa
